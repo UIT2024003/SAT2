@@ -1,28 +1,21 @@
 import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
-import Cart from "./pages/cart";
-import Profile from "./pages/profile";
+import Cart from "./pages/Cart";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <Dashboard />
-            <Cart
-              items={[
-                { name: "Apple", price: 10 },
-                { name: "Banana", price: 5 },
-              ]}
-            />
-          </>
-        }
-      />
+    <>
+      <Navbar />
 
-      <Route path="/profile" element={<Profile />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/cart" element={<Cart items={[]} />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </>
   );
 }
 
