@@ -2,7 +2,7 @@ import React from "react";
 
 const Profile = () => {
   return (
-    <div style={styles.container}>
+    <div style={styles.page}>
       <div style={styles.card}>
         <img
           src="https://via.placeholder.com/150"
@@ -11,12 +11,12 @@ const Profile = () => {
         />
 
         <h2 style={styles.name}>Alvina Afsheen</h2>
-        <p style={styles.role}>B-Tech Student | Web & IoT Enthusiast</p>
+        <p style={styles.role}>B-Tech Student • Web & IoT Enthusiast</p>
 
         <div style={styles.info}>
-          <p><strong>Email:</strong> alvinaafsheen2@gmail.com</p>
-          <p><strong>Location:</strong> Amravati, Maharashtra</p>
-          <p><strong>Skills:</strong> React, IoT, SQL, Web Development</p>
+          <p><span>Email</span> alvinaafsheen2@gmail.com</p>
+          <p><span>Location</span> Amravati, Maharashtra</p>
+          <p><span>Skills</span> React, IoT, SQL, Web Development</p>
         </div>
 
         <button style={styles.button}>Edit Profile</button>
@@ -26,47 +26,63 @@ const Profile = () => {
 };
 
 const styles = {
-  container: {
+  page: {
     minHeight: "100vh",
+    width: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f4f6f8",
+    background: "linear-gradient(135deg, #eef2ff, #f8fafc)",
   },
+
   card: {
-    backgroundColor: "#fff",
-    padding: "30px",
-    borderRadius: "12px",
-    width: "320px",
+    backgroundColor: "#ffffff",
+    padding: "32px",
+    borderRadius: "16px",
+    width: "360px",
     textAlign: "center",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+    boxShadow: "0 20px 40px rgba(0,0,0,0.12)",
   },
+
   image: {
-    width: "120px",
-    height: "120px",
+    width: "130px",
+    height: "130px",
     borderRadius: "50%",
-    marginBottom: "15px",
+    objectFit: "cover",
+    marginBottom: "16px",
+    border: "4px solid #4f46e5",
   },
+
   name: {
-    margin: "10px 0 5px",
+    fontSize: "22px",
+    fontWeight: "600",
+    marginBottom: "6px",
   },
+
   role: {
-    color: "#666",
     fontSize: "14px",
-    marginBottom: "20px",
+    color: "#6b7280",
+    marginBottom: "24px",
   },
+
   info: {
     textAlign: "left",
     fontSize: "14px",
-    marginBottom: "20px",
+    marginBottom: "24px",
+    lineHeight: "1.8",
   },
+
   button: {
+    width: "100%",
     backgroundColor: "#4f46e5",
     color: "#fff",
     border: "none",
-    padding: "10px 20px",
-    borderRadius: "8px",
+    padding: "12px",
+    borderRadius: "10px",
+    fontSize: "14px",
+    fontWeight: "500",
     cursor: "pointer",
+    transition: "0.3s",
   },
 };
 
