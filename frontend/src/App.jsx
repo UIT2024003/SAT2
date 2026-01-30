@@ -1,5 +1,5 @@
 import Dashboard from "./pages/Dashboard";
-import Cart from "./pages/Cart";
+import Cart from "./pages/cart";
 
 function App() {
   return (
